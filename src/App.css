@@ -1,0 +1,58 @@
+main {
+  background: #fbfbfb;
+}
+
+.texth2 {
+  color: #003d36;
+  font-family: Poppins;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.28px;
+  line-height: normal;
+}
+p {
+  color: #b0b0b0;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.waitlist2 {
+  font-family: Poppins;
+  border-radius: 8px !important;
+
+  display: flex;
+  padding: 13px 27px;
+  justify-content: center;
+  align-items: center;
+
+  color: #ffff;
+  text-align: center;
+  margin-right: 20px;
+  font-size: 16px;
+  font-style: normal;
+
+  line-height: 16px; /* 80% */
+  border: none;
+  background-color: #2b8f84;
+}
+.imgpair {
+  width: 80%;
+  margin-left: 90px;
+  height: 70vh;
+}
+.carousel_section {
+  height: 100%;
+  background-color: #006559;
+}
+
+.findpair {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
