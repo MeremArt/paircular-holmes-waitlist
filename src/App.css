@@ -161,3 +161,61 @@ p {
   letter-spacing: 0.16px;
   text-transform: uppercase;
 }
+
+@media screen and (max-width: 700px) {
+  .texth2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+  .waitlist2 {
+    margin: auto;
+  }
+  .imgpair {
+    margin: auto;
+    width: 100%;
+    /* margin-left: 90px; */
+    height: 100%;
+    padding-top: 20px;
+  }
+  .findpair {
+    font-size: 15px;
+  }
+  .imgpair2 {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
+  .text2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .textp {
+    text-align: center;
+  }
+  .Community h2 {
+    font-size: 28px;
+  }
+
+  .footer h2 {
+    font-size: 12px;
+  }
+  .footer h1 {
+    font-size: 12px;
+  }
+  .footer p {
+    font-size: 7px;
+  }
+  .Community p {
+    font-size: 14px;
+  }
+  .logo {
+    width: -webkit-fill-available;
+  }
+  .waitlist {
+    font-size: 12px;
+    padding: 6px 4px;
+  }
+}
