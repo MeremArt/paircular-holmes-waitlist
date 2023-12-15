@@ -195,8 +195,11 @@ p {
   .textp {
     text-align: center;
   }
+  .Community {
+    overflow: hidden;
+  }
   .Community h2 {
-    font-size: 28px;
+    font-size: 18px;
   }
 
   .footer h2 {
@@ -209,7 +212,11 @@ p {
     font-size: 7px;
   }
   .Community p {
+    line-height: normal;
+    letter-spacing: normal;
     font-size: 14px;
+    /* line-height: 0px;
+    letter-spacing: 0px; */
   }
   .logo {
     width: -webkit-fill-available;
