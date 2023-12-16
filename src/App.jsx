@@ -1,10 +1,21 @@
 import { useState } from "react";
 import { links } from "../data";
 import Navbar from "./components/Navbar";
+import ModalForm from "./components/Modal/ModalForm";
 import "./App.css";
 import AutoPlaySlide from "./components/Carousel/AutoPlaySlide";
 import Options from "./components/Option/Options";
 function App() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   const formUrl = () => {
     const url = "https://whatsapp.com/channel/0029VaBmFr1EVccR3VwEIa3H";
     // Open the URL in a new tab
@@ -40,7 +51,11 @@ function App() {
                   elevate your entire living experience.
                 </p>
                 <br />
-                <button className="waitlist2"> Join Waitlist</button>
+                <button className="waitlist2" onClick={openModal}>
+                  {" "}
+                  Join Waitlist
+                </button>
+                <ModalForm isOpen={modalIsOpen} onRequestClose={closeModal} />
               </div>
               <div className="col-lg-6">
                 <div>
@@ -149,7 +164,7 @@ function App() {
                 the latest updates, exclusive offers, and special promotions.
                 Join our community and elevate your living with Paircular Homes.
               </p>
-              <br />
+              <br id="HIDE" />
 
               <button className="waitlist" onClick={formUrl}>
                 Join Our Community
