@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import axios from "axios"; // Import axios
 import "./Modal.css"; // Import the styles
 
 Modal.setAppElement("#root"); // Set the root element for accessibility
@@ -10,20 +11,19 @@ const ModalForm = ({ isOpen, onRequestClose }) => {
 
   const handleSubmit = async (values) => {
     try {
-      // Perform a POST request to your API
-      const response = await fetch(
+      // Perform a POST request to your API using axios
+      const response = await axios.post(
         "https://paircular-server-vdwt.onrender.com/api/v1/submit",
+        values,
         {
-          method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(values),
         }
       );
 
       // Check if the request was successful (status code 2xx)
-      if (response.ok) {
+      if (response.status === 200) {
         console.log("Form data sent successfully");
         setIsSubmitted(true);
       } else {
