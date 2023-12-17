@@ -6,22 +6,33 @@ import "./Modal.css"; // Import the styles
 Modal.setAppElement("#root"); // Set the root element for accessibility
 
 const ModalForm = ({ isOpen, onRequestClose }) => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  const openModal = () => {
-    setModalIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-  };
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (values) => {
-    // Add your form submission logic here
-    console.log("Form submitted with values:", values);
-    setIsSubmitted(true);
-    // You can perform additional actions here, such as sending data to a server
+  const handleSubmit = async (values) => {
+    try {
+      // Perform a POST request to your API
+      const response = await fetch(
+        "https://paircular-server-vdwt.onrender.com/api/v1/submit",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
+
+      // Check if the request was successful (status code 2xx)
+      if (response.ok) {
+        console.log("Form data sent successfully");
+        setIsSubmitted(true);
+      } else {
+        // Handle errors or show an error message
+        console.error("Error sending form data:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   const resetForm = () => {
@@ -82,16 +93,6 @@ const ModalForm = ({ isOpen, onRequestClose }) => {
                 />
                 <ErrorMessage name="email" component="div" />
               </div>
-              {/* <br /> */}
-              {/* <div>
-                <Field
-                  type="text"
-                  id="number"
-                  name="number"
-                  placeholder="Enter phone number"
-                />
-                <ErrorMessage name="number" component="div" />
-              </div> */}
               <button type="submit">Submit</button>
             </Form>
           </Formik>
