@@ -42,6 +42,7 @@ label {
   margin-bottom: 5px;
 }
 .hold {
+  overflow: hidden;
   font-family: Poppins;
   font-size: 20px;
   color: #2b8f84;
