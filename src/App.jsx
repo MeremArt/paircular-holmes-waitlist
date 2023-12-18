@@ -184,13 +184,14 @@ function App() {
             <br />
             <div className="container">
               <div className="row">
-                <div className="col-lg-4 col-4">
+                <div className="col-lg-4 col-5">
                   <h2>Email address</h2>
                   <p>paircularholmes@gmail.com</p>
                 </div>
-                <div className="col-lg-4 col-4">
+                <div className="col-lg-4 col-2">
                   <center>
                     <svg
+                      className="hotit"
                       width="71"
                       height="83"
                       viewBox="0 0 71 83"
@@ -240,7 +241,7 @@ function App() {
                     </svg>
                   </center>
                 </div>
-                <div className="col-lg-4 col-4">
+                <div className="col-lg-4 col-5">
                   <h1>
                     ©Paircularholmes.com 2023 <br />
                     <br />{" "}

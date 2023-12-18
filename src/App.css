@@ -204,10 +204,10 @@ p {
   }
 
   .footer h2 {
-    font-size: 12px;
+    font-size: 10px;
   }
   .footer h1 {
-    font-size: 12px;
+    font-size: 10px;
   }
   .footer p {
     font-size: 7px;
@@ -228,5 +228,8 @@ p {
   }
   #HIDE {
     display: none;
+  }
+  .hotit {
+    width: 30px;
   }
 }
