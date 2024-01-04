@@ -50,10 +50,9 @@ function App() {
                   spaces that not only fulfill your housing needs but also
                   elevate your entire living experience.
                 </p>
-                <br />
+
                 <button className="waitlist2" onClick={openModal}>
-                  {" "}
-                  Join Waitlist
+                  Early Access
                 </button>
                 <ModalForm isOpen={modalIsOpen} onRequestClose={closeModal} />
               </div>
