@@ -113,6 +113,7 @@ a {
 }
 .sign {
   display: flex;
+  gap: 17px;
 }
 .Sign_in {
   color: #fff;
