@@ -9,6 +9,20 @@ a {
   opacity: 1;
 }
 
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
 /*  global classes */
 
 /* section */
@@ -19,13 +33,15 @@ a {
 }
 
 /* @media screen and (min-width: 992px) {
-      .section {
-        width: 95vw;
-      }
-    } */
+    .section {
+      width: 95vw;
+    }
+  } */
 
 .Beans_navbody {
-  background: #00796b;
+  border-top: 1.5px solid #f1f5f5;
+  border-bottom: 1.5px solid #f1f5f5;
+  background: #003d35;
   z-index: 100;
   position: fixed;
   top: 0;
@@ -52,8 +68,8 @@ a {
   transform: rotate(90deg);
 }
 .logo {
-  height: 3.5rem;
-  margin-left: 20px;
+  height: 3rem;
+  margin-left: 60px;
 }
 .fix-log {
   margin-right: 60px;
@@ -92,42 +108,6 @@ a {
   transition: var(--transition);
   cursor: pointer;
 }
-.waitlist {
-  font-family: Poppins;
-  border-radius: 8px !important;
-
-  display: flex;
-  padding: 13px 27px;
-  justify-content: center;
-  align-items: center;
-
-  color: #070707;
-  text-align: center;
-  margin-right: 20px;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px; /* 80% */
-  border: none;
-  background: #f5f5dc;
-}
-.sign {
-  display: flex;
-  gap: 17px;
-}
-.Sign_in {
-  color: #fff;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px;
-  background: none;
-  border-radius: 8px;
-  border: 1px solid #f5f5dc;
-}
-.Sign_in:hover {
-  color: #070707;
-}
 @media screen and (max-width: 768px) {
   .Beans_nav-center {
     display: flex;
@@ -141,73 +121,6 @@ a {
     margin-left: 0px;
   }
 }
-/* Navbar.css */
-
-/* Your existing styles */
-
-/* Hamburger Menu Styles */
-.hamburger {
-  display: none; /* Hide by default for larger screens */
-  cursor: pointer;
-  padding: 15px;
-  z-index: 1000;
-}
-
-.bar {
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-/* Toggle Animation for Hamburger Bars */
-.bar.toggle:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.bar.toggle:nth-child(2) {
-  opacity: 0;
-}
-
-.bar.toggle:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-
-/* Mobile Links Styles */
-.mobile-links {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0px;
-  right: 0;
-  background-color: #333;
-  width: 100%;
-  padding: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-}
-
-.mobile-links button {
-  background-color: #444;
-  color: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Media Query to Show/Hide Hamburger for Mobile Devices */
-@media only screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .sign {
-    display: none; /* Hide navigation links for larger screens when hamburger is displayed */
-  }
-}
-
 @media screen and (min-width: 800px) {
   .Beans_nav-center {
     /* max-width: 1170px; */
@@ -221,8 +134,8 @@ a {
     padding: 0;
   }
   /* .nav-toggle {
-      display: none;
-    } */
+    display: none;
+  } */
   .Beans-contain {
     height: auto !important;
   }

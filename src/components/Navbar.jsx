@@ -1,7 +1,9 @@
 import React, { useState, useRef } from "react";
 import logo from "../assets/pair.svg";
+import Hamburger from "../assets/Hamburger1.svg";
+import Close from "../assets/Close.svg";
+import Navmodal from "./NavModal/NavModal";
 import "./Navbar.css";
-
 const Navbar = ({ links, fire }) => {
   const [showLinks, setShowLinks] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -31,29 +33,14 @@ const Navbar = ({ links, fire }) => {
           <img src={logo} className="logo" alt="logo" />
         </div>
 
-        {/* Hamburger Menu Icon for Mobile */}
-        <div className="hamburger" onClick={toggleHandler}>
-          <div className={`bar ${toggleMenu ? "toggle" : ""}`}></div>
-          <div className={`bar ${toggleMenu ? "toggle" : ""}`}></div>
-          <div className={`bar ${toggleMenu ? "toggle" : ""}`}></div>
-        </div>
-
-        {/* Navigation Links for Desktop */}
         <div className="sign" ref={linksContainerRef} onClick={toggleHandler}>
-          <button className="Sign_in">Sign In</button>
-          <button className="waitlist">Sign Up</button>
+          <img
+            className="fix-log"
+            src={!toggleMenu ? Hamburger : Close}
+            alt="Close tab or hamburger"
+          />
         </div>
-
-        {/* Modal Form */}
-        {/* <ModalForm isOpen={modalIsOpen} onRequestClose={closeModal} /> */}
-
-        {/* Navigation Links for Mobile */}
-        {toggleMenu && (
-          <div className="mobile-links">
-            <button className="Sign_in">Sign In</button>
-            <button className="waitlist">Sign Up</button>
-          </div>
-        )}
+        {toggleMenu && <Navmodal setToggleMenu={setToggleMenu} fire={fire} />}
       </div>
     </nav>
   );
